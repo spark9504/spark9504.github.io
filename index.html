@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="??? ??? spark? ?????">
+    <title>spark | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="site-header">
+            <a class="brand" href="#home" aria-label="??? ??">
+                <span class="brand__mark">S</span>
+                <span class="brand__text">spark</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-label="?? ??">
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+                <span class="menu-toggle__bar"></span>
+            </button>
+            <nav class="site-nav" aria-label="? ??">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="home" class="hero" aria-labelledby="hero-title">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">???? ???? ??? ???</p>
+                    <h1 id="hero-title" class="hero__title">?????,<br><span>spark</span>???.</h1>
+                    <p class="hero__text">??? ???? ???? ????? ???, ??? ??? ????? ?? ?? ?????. ??? ??, ???, ??? ?? ??? ?? ?? ?? ??? ???? ????.</p>
+                    <div class="hero__actions">
+                        <a class="button button--primary" href="#projects">????? ??</a>
+                        <a class="button button--ghost" href="mailto:spark@example.com">??? ???</a>
+                    </div>
+                    <div class="hero__meta">
+                        <div>
+                            <span class="hero__meta-label">?? ??</span>
+                            <span>??? ?? � ?? ?? � ???? ??</span>
+                        </div>
+                        <div>
+                            <span class="hero__meta-label">?? ??</span>
+                            <span>???? ?????, AI ?? ???</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero__visual" role="presentation">
+                    <div class="portrait-frame">
+                        <div class="portrait-frame__ring"></div>
+                        <div class="portrait-frame__inner"></div>
+                        <img src="assets/images/profile-placeholder.svg" alt="" />
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="about" aria-labelledby="about-title">
+                <div class="section-header">
+                    <span class="section-eyebrow">About</span>
+                    <h2 id="about-title">???? ?? ?? ??? ?????</h2>
+                </div>
+                <div class="about__grid">
+                    <p class="about__lead">??? ??? ????, ?? ?? ??? ????, ??? ??? ??? ? ?? ???? ??? ???. ?? ?? ??? ??????? ??? ??, ??? ??? ???? ????? ?????.</p>
+                    <ul class="about__highlights">
+                        <li>
+                            <span class="about__number">5+</span>
+                            <span class="about__label">?? ?? ??</span>
+                        </li>
+                        <li>
+                            <span class="about__number">30+</span>
+                            <span class="about__label">???? ??</span>
+                        </li>
+                        <li>
+                            <span class="about__number">20%</span>
+                            <span class="about__label">?? ?? ??</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="skills" class="skills" aria-labelledby="skills-title">
+                <div class="section-header">
+                    <span class="section-eyebrow">Skills</span>
+                    <h2 id="skills-title">?? ??? ??</h2>
+                    <p class="section-subtitle">???? ? ??(?? ?? ? ?? ? ??????)? ?? ? ?? ??? ???? ????.</p>
+                </div>
+                <div class="skills__grid">
+                    <article class="skill-card">
+                        <div class="skill-card__icon" aria-hidden="true"><i class="ri-bar-chart-2-line"></i></div>
+                        <h3>?? & ???</h3>
+                        <ul>
+                            <li>?? ?? ?? ??</li>
+                            <li>?? ?? ? A/B ???</li>
+                            <li>?? � ??? � ?? ??</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-card__icon" aria-hidden="true"><i class="ri-database-2-line"></i></div>
+                        <h3>??? ?????</h3>
+                        <ul>
+                            <li>SQL ??? ???</li>
+                            <li>ETL ????? ??</li>
+                            <li>???? ????????</li>
+                        </ul>
+                    </article>
+                    <article class="skill-card">
+                        <div class="skill-card__icon" aria-hidden="true"><i class="ri-team-line"></i></div>
+                        <h3>?? & ??????</h3>
+                        <ul>
+                            <li>??? ????</li>
+                            <li>OKR ? KPI ??</li>
+                            <li>??? ?????</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="skills__tools">
+                    <h3>?? ??</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>SQL</li>
+                        <li>R</li>
+                        <li>Tableau</li>
+                        <li>Looker Studio</li>
+                        <li>dbt</li>
+                        <li>Airflow</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="experience" class="experience" aria-labelledby="experience-title">
+                <div class="section-header">
+                    <span class="section-eyebrow">Experience</span>
+                    <h2 id="experience-title">?? ??</h2>
+                </div>
+                <div class="timeline">
+                    <article class="timeline__item">
+                        <p class="timeline__period">2023 - ??</p>
+                        <h3 class="timeline__title">???? ??? ??? � TechStart</h3>
+                        <p class="timeline__body">??? ?? ?? ??? ?? ?? ??? 18% ??. ??? ????? ???? ?? ?? ?? ??? ???.</p>
+                    </article>
+                    <article class="timeline__item">
+                        <p class="timeline__period">2020 - 2023</p>
+                        <h3 class="timeline__title">BI ????? � InsightWorks</h3>
+                        <p class="timeline__body">?? ??? ?? ??? ???? ??? ?? ?? ??. Tableau ???? ???? ??? ?? ??? 60% ??.</p>
+                    </article>
+                    <article class="timeline__item">
+                        <p class="timeline__period">2017 - 2020</p>
+                        <h3 class="timeline__title">??? ?????? � Data Lab</h3>
+                        <p class="timeline__body">?? ?? ???? ?? ?? ?? 12% ??. ??? ???? ????? ?? ? ?? ?? ??.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="projects" class="projects" aria-labelledby="projects-title">
+                <div class="section-header">
+                    <span class="section-eyebrow">Projects</span>
+                    <h2 id="projects-title">?? ????</h2>
+                    <p class="section-subtitle">?? ??? ????? ????? ??????. ??? ???? ?? ??? ??? ? ????.</p>
+                </div>
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__meta">
+                            <span class="project-card__tag">Experiment Design</span>
+                            <span class="project-card__year">2024</span>
+                        </div>
+                        <h3>??? ?? ??</h3>
+                        <p>??? ???? ?? ?? ???? ?? ??? 18% ??. ????? ?? ??? ??? ???? ?? ????? ??????.</p>
+                        <div class="project-card__links">
+                            <a href="#" aria-label="???? ?? ??">Case Study</a>
+                            <a href="#" aria-label="??? ?????">GitHub</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__meta">
+                            <span class="project-card__tag">Data Platform</span>
+                            <span class="project-card__year">2023</span>
+                        </div>
+                        <h3>??? ??? ?????</h3>
+                        <p>Airflow ?? ETL ????? ???? KPI ??? ???. ??? ?? ??? ???? ???? 0.5% ??? ??????.</p>
+                        <div class="project-card__links">
+                            <a href="#" aria-label="???? ?? ??">Overview</a>
+                            <a href="#" aria-label="??? ?????">GitHub</a>
+                        </div>
+                    </article>
+                    <article class="project-card">
+                        <div class="project-card__meta">
+                            <span class="project-card__tag">Analytics</span>
+                            <span class="project-card__year">2022</span>
+                        </div>
+                        <h3>??? ??? ??</h3>
+                        <p>??? ??? ?? ??? ??? ??? ?? ??? ????, ?? ?? ??? ?? ???? ??????.</p>
+                        <div class="project-card__links">
+                            <a href="#" aria-label="???? ?? ??">Dashboard</a>
+                            <a href="#" aria-label="??? ?????">GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="cta" aria-labelledby="cta-title">
+                <div class="cta__content">
+                    <h2 id="cta-title">?? ?? ??? ?? ????</h2>
+                    <p>??? ?? ?? ??, ?? ??, ?? ?? ?? ?? ??? ????? ???? ?? ???.</p>
+                    <a class="button button--primary" href="mailto:spark@example.com">???? ??</a>
+                </div>
+            </section>
+
+            <section id="contact" class="contact" aria-labelledby="contact-title">
+                <div class="section-header">
+                    <span class="section-eyebrow">Contact</span>
+                    <h2 id="contact-title">????</h2>
+                </div>
+                <div class="contact__grid">
+                    <div class="contact__info">
+                        <p>??? ??? ??? ????. ?? ???? ??? ???? ?? ???.</p>
+                        <ul>
+                            <li><i class="ri-mail-line" aria-hidden="true"></i><a href="mailto:spark@example.com">spark@example.com</a></li>
+                            <li><i class="ri-github-line" aria-hidden="true"></i><a href="https://github.com/spark9504" target="_blank" rel="noopener noreferrer">github.com/spark9504</a></li>
+                            <li><i class="ri-linkedin-box-line" aria-hidden="true"></i><a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <form class="contact__form" aria-label="??? ??? ?">
+                        <div class="field">
+                            <label for="name">??</label>
+                            <input id="name" type="text" name="name" placeholder="???" required>
+                        </div>
+                        <div class="field">
+                            <label for="email">???</label>
+                            <input id="email" type="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="field">
+                            <label for="message">???</label>
+                            <textarea id="message" name="message" rows="4" placeholder="????? ?? ?? ???"></textarea>
+                        </div>
+                        <button class="button button--primary" type="submit">???</button>
+                        <p class="form__notice">* ? ?? ????? ?????. ?? ?? ??? ?? ?? ??.</p>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="footer__social" aria-label="?? ??">
+                <a href="https://github.com/spark9504" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill"></i></a>
+                <a href="https://www.linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill"></i></a>
+                <a href="mailto:spark@example.com" aria-label="Email"><i class="ri-mail-fill"></i></a>
+            </div>
+            <p>&copy; <span id="current-year"></span> spark. Crafted with curiosity and empathy.</p>
+        </footer>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
