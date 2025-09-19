@@ -240,7 +240,7 @@
 											</li>
 											<li>
 												<span>Mail</span>
-												<span><a href="spark9504@gmail.com">spark9504@gmail.com</a></span>
+												<span><a href="mailto:spark9504@gmail.com">spark9504@gmail.com</a></span>
 											</li>
 											<li>
 												<span>Phone</span>
@@ -811,7 +811,7 @@
 								</ul>
 								<!-- GitHub Link Button Start-->
 								<!-- <div class="elisc_tm_button" data-position="center">
-									<a href="https://github.com/yl540016/">View all projects in GitHub</a>
+									<a href="https://github.com/spark9504">View all projects in GitHub</a>
 
 								</div> -->
 								<!-- GitHub Link Button End-->
@@ -1080,34 +1080,37 @@
 												<a href="spark9504@gmail.com">spark9504@gmail.com</a>
 											</li>
 											<li>
-												<a class="href_location" href="#">11, Samseong-ro 85-gil, Gangnam-gu, Seoul, Republic of Korea</a>
+												<a class="href_location" href="#">Seongdong-gu, Seoul, Republic of Korea</a>
 											</li>
 										</ul>
 									</div>
 								</div>
 								<div class="right">
 									<div class="fields">
-										<form action="/" method="post" class="contact_form" id="contact_form">
+										<form action="https://formsubmit.co/ajax/spark9504@gmail.com" method="post" class="contact_form" id="contact_form">
+													<input type="hidden" name="_subject" value="New message from the portfolio contact form">
+													<input type="hidden" name="_captcha" value="false">
+													<input type="hidden" name="_template" value="table">
 											<div class="returnmessage" data-success="Your message has been received, We will contact you soon."></div>
 											<div class="empty_notice"><span>Please Fill Required Fields</span></div>
 											<div class="first">
 												<ul>
 													<li>
-														<input id="name" type="text" placeholder="Enter your name" autocomplete="off">
+														<input id="name" name="name" type="text" placeholder="Enter your name" autocomplete="off">
 													</li>
 													<li>
-														<input id="email" type="text" placeholder="Your email" autocomplete="off">
+														<input id="email" name="email" type="email" placeholder="Your email" autocomplete="off">
 													</li>
 												</ul>
 											</div>
 											<div class="last">
-												<textarea id="message" placeholder="Write something..."></textarea>
+												<textarea id="message" name="message" placeholder="Write something..."></textarea>
 											</div>
 											<div class="elisc_tm_button">
 												<a id="send_message" href="#">Submit now</a>
 											</div>
 
-											<!-- If you want change mail address to yours, just open "modal" folder >> contact.php and go to line 4 and change detail to yours.  -->
+											<!-- Update the form action above with your email (https://formsubmit.co ajax endpoint) to receive messages. -->
 
 										</form>
 									</div>

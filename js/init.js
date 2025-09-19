@@ -451,41 +451,73 @@ function elisc_tm_data_images(){
 // -----------------------------------------------------
 
 function elisc_tm_contact_form(){
-	
 	"use strict";
-	
-	jQuery(".contact_form #send_message").on('click', function(){
-		
-		var name 		= jQuery(".contact_form #name").val();
-		var email 		= jQuery(".contact_form #email").val();
-		var message 	= jQuery(".contact_form #message").val();
-		var subject 	= jQuery(".contact_form #subject").val();
-		var success     = jQuery(".contact_form .returnmessage").data('success');
-	
-		jQuery(".contact_form .returnmessage").empty(); //To empty previous error/success message.
-		//checking for blank fields	
-		if(name===''||email===''||message===''){
-			
-			jQuery('div.empty_notice').slideDown(500).delay(2000).slideUp(500);
-		}
-		else{
-			// Returns successful data submission message when the entered information is stored in database.
-			jQuery.post("modal/contact.php",{ ajax_name: name, ajax_email: email, ajax_message:message, ajax_subject: subject}, function(data) {
-				
-				jQuery(".contact_form .returnmessage").append(data);//Append returned message to message paragraph
-				
-				
-				if(jQuery(".contact_form .returnmessage span.contact_error").length){
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(2000).slideUp(500);		
-				}else{
-					jQuery(".contact_form .returnmessage").append("<span class='contact_success'>"+ success +"</span>");
-					jQuery(".contact_form .returnmessage").slideDown(500).delay(4000).slideUp(500);
+	var form		= jQuery("#contact_form");
+	if(!form.length){
+		return;
+	}
+	var sendButton	= jQuery(".contact_form #send_message");
+	var returnMessage	= jQuery(".contact_form .returnmessage");
+	var emptyNotice	= jQuery(".contact_form .empty_notice");
+	var successText	= returnMessage.data('success') || "Thank you. Your message has been sent.";
+	var emailPattern	= /^[\w.%+-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+	sendButton.on('click', function(){
+		var button	= jQuery(this);
+		var name	= jQuery(".contact_form #name").val().trim();
+		var email	= jQuery(".contact_form #email").val().trim();
+		var message	= jQuery(".contact_form #message").val().trim();
+		var endpoint = form.attr('action');
+		returnMessage.stop(true,true).empty();
+		if(name === '' || email === '' || message === ''){
+			emptyNotice.stop(true,true).slideDown(500).delay(2000).slideUp(500);
+		}else if(!emailPattern.test(email)){
+			returnMessage.append("<span class='contact_error'>* Invalid email *</span>");
+			returnMessage.slideDown(500).delay(3000).slideUp(500);
+		}else if(!endpoint){
+			returnMessage.append("<span class='contact_error'>* Email service endpoint is missing *</span>");
+			returnMessage.slideDown(500).delay(3000).slideUp(500);
+		}else{
+			var defaultText = button.data('default-text');
+			if(!defaultText){
+				defaultText = button.text();
+				button.data('default-text', defaultText);
+			}
+			button.text('Sending...').addClass('sending');
+			button.css('pointer-events','none');
+			var payload = {name: name, email: email, message: message};
+			form.find('input[type="hidden"]').each(function(){
+				var field = jQuery(this);
+				var fieldName = field.attr('name');
+				if(fieldName){
+					payload[fieldName] = field.val();
 				}
-				
-				if(data===""){
-					jQuery("#contact_form")[0].reset();//To reset form fields on success
+			});
+			var cleanup = function(){
+				button.text(defaultText).removeClass('sending');
+				button.css('pointer-events','auto');
+			};
+			fetch(endpoint, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				body: JSON.stringify(payload)
+			}).then(function(response){
+				if(!response.ok){
+					throw new Error('Sorry, the email service returned an error.');
 				}
-				
+				return response.json();
+			}).then(function(){
+				returnMessage.append("<span class='contact_success'>" + successText + "</span>");
+				returnMessage.slideDown(500).delay(4000).slideUp(500);
+				form[0].reset();
+				cleanup();
+			}).catch(function(error){
+				var errorText = (error && error.message) ? error.message : 'Sorry, the message could not be sent.';
+				returnMessage.append("<span class='contact_error'>" + errorText + "</span>");
+				returnMessage.slideDown(500).delay(4000).slideUp(500);
+				cleanup();
 			});
 		}
 		return false; 

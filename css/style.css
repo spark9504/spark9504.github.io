@@ -847,7 +847,7 @@ body::-webkit-scrollbar-thumb{
 	text-transform: uppercase;
 	text-decoration: underline;
 }
-.elisc_tm_biography .info ul li span:last-child{
+.elisc_tm_biography .info ul li span:not(:first-child){
 	font-family: var(--font-inter);
 	font-weight: 700;
 	color: var(--dark-color);
