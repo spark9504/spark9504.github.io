@@ -525,6 +525,7 @@
 									<!-- </li> -->
 
 									<!-- Project: 공간가치 데이터 마트 구축 (롯데멤버스) -->
+									<!-- Project: Retail Location Intelligence (Lotte Members) -->
 									<li>
 									<div class="list_inner">
 										<div class="image">
@@ -533,8 +534,8 @@
 										<a class="elisc_tm_full_link portfolio_popup" href="#"></a>
 										</div>
 										<div class="details">
-										<span class="category"><a href="#">Python · SQL · PostGIS</a></span>
-										<h3 class="title"><a class="line_effect portfolio_popup" href="#">Retail Location Intelligence / 공간가치 데이터 마트</a></h3>
+										<span class="category"><a href="#">Python · SQL · Oracle</a></span>
+										<h3 class="title"><a class="line_effect portfolio_popup" href="#">Retail Location Intelligence / Spatial Value Data Mart</a></h3>
 										</div>
 									</div>
 
@@ -544,45 +545,56 @@
 										<div class="main_details">
 											<div class="textbox">
 											<p><strong>Introduction:</strong><br>
-												전국 오프라인 매장 출점·개편 의사결정을 지원하기 위해 50m×50m 격자 단위의 외부 공간데이터(통신, 카드, 센서스)와 내부 거래/CRM 데이터를 통합한 ‘공간가치 데이터 마트’를 구축했습니다. 예측 정확도를 개선하고, 캐니벌라이제이션 리스크를 정량화하는 분석 파이프라인을 표준화했습니다.
+												Led the build of a grid-based (50m × 50m) spatial data mart that unifies external datasets
+												(telco mobility, credit-card transactions, and census) with internal POS/CRM to support
+												nationwide offline store expansion and optimization. Standardized the analytics pipeline to
+												quantify cannibalization risk and improve sales forecasting accuracy.
 											</p>
+
 											<p><br><strong>Objectives:</strong><br>
 												<ol style="padding-left:20px;">
-												<li>다채널 외부 공간데이터와 내부 POS/CRM의 일원화(SSOT)와 배치 자동화</li>
-												<li>매장 출점/폐점/리로케이션 판단을 위한 수요·경쟁·간섭(캐니벌) 지표화</li>
-												<li>업무부서가 바로 활용 가능한 지리 기반 시각화/리포팅 제공</li>
+												<li>Unify multi-source spatial data with internal POS/CRM in a single standardized data mart.</li>
+												<li>Quantify local demand, competition, and cannibalization risk for open/close/relocation decisions.</li>
+												<li>Deliver geospatial analyses and reporting that business teams can directly act on.</li>
 												</ol>
 											</p>
+
 											<p><br><strong>Methodology:</strong><br>
 												<ol style="padding-left:20px;">
-												<li>데이터 모델링: 50m 그리드 기반 스키마, 지오스페이셜 조인 최적화(PostGIS)</li>
-												<li>특성 엔지니어링: 유동·상주·근로·접근성·경쟁도 등 핵심 피처 파이프라인화</li>
-												<li>예측/평가: 매출 예측 모델 정비, 캐니벌라이제이션 리스크 지수 산출</li>
-												<li>자동화: Python+크론으로 월/분기 갱신 파이프라인 및 품질 모니터링</li>
+												<li>Data modeling: 50m grid schema and high-performance spatial joins in PostgreSQL/PostGIS.</li>
+												<li>Feature engineering: mobility, residential/workplace population, accessibility, competition.</li>
+												<li>Forecasting & evaluation: refined sales forecasting and cannibalization risk index.</li>
+												<li>Automation: monthly/quarterly refresh via Python + crontab with data quality monitoring.</li>
 												</ol>
 											</p>
+
 											<p><br><strong>Results:</strong><br>
 												<ol style="padding-left:20px;">
-												<li>매출 예측 정확도 +18%p 개선</li>
-												<li>매장 입지/재배치 평가 업무의 표준화 및 리드타임 단축</li>
-												<li>실무팀 자가 탐색 가능한 지도형 UI로 활용 부서 확대</li>
+												<li>Improved sales-forecasting accuracy by <strong>18%</strong> through integrated spatial modeling.</li>
+												<li>Standardized site/relocation evaluation, reducing decision lead time and rework.</li>
+												<li>Expanded adoption across business teams with consistent, location-aware deliverables.</li>
 												</ol>
 											</p>
+
 											<p><br><strong>Conclusion:</strong><br>
-												외부 공간데이터와 내부 데이터의 고밀도 통합을 통해 위치기반 의사결정의 정밀도를 대폭 높였고, 캐니벌 리스크를 사전에 점검하는 체계를 조직 전반으로 확산했습니다.
+												By tightly integrating external spatial data with internal transactions, the program materially
+												increased the precision of location decisions and established a repeatable process to assess
+												cannibalization risk before opening or relocating stores.
 											</p>
 											</div>
+
 											<div class="detailbox">
 											<ul>
-												<li><span class="first">Tools/Libraries</span><span>Python, SQL, PostgreSQL, PostGIS, GeoPandas, Airflow/cron</span></li>
-												<li><span class="first">Models</span><span>회귀/시계열 예측, 수요·경쟁 지수화</span></li>
-												<li><span class="first">Date</span><span>Jul 2024 – Present</span></li>
+												<li><span class="first">Tools/Libraries</span><span>Python, SQL, Oracle, GeoPandas, crontab</span></li>
+												<li><span class="first">Models</span><span>Regression/Time-series forecasting, Cannibalization risk index</span></li>
+												<li><span class="first">Date</span><span>Jul 2024 – Jul 2025</span></li>
 											</ul>
 											</div>
 										</div>
+
 										<div class="additional_images"><ul></ul></div>
 										<div class="elisc_tm_button" data-position="center">
-											<a href="#">(사내 시스템 – 링크 비공개)</a>
+											<a href="#">(Internal system — link not public)</a>
 										</div>
 										</div>
 									</div>
@@ -590,11 +602,12 @@
 									</li>
 
 									<!-- Project: 소상공인 개방형 빅데이터 플랫폼(1차) -->
+									<!-- Project: Small Enterprise Open Big Data Platform (Phase 1) -->
 									<li>
 									<div class="list_inner">
 										<div class="image">
 										<img src="img/thumbs/31-36.jpg" alt="" />
-										<div class="main" data-img-url="img/portfolio/ses-platform.jpg"></div>
+										<div class="main" data-img-url="img/portfolio/semas_platform_1.jpg"></div>
 										<a class="elisc_tm_full_link portfolio_popup" href="#"></a>
 										</div>
 										<div class="details">
@@ -603,53 +616,62 @@
 										</div>
 									</div>
 
+									<!-- Modalbox Info Start -->
 									<div class="hidden_content_portfolio">
 										<div class="popup_details">
 										<div class="main_details">
 											<div class="textbox">
 											<p><strong>Introduction:</strong><br>
-												전국 300만+ 소상공인 정책·상권 분석을 지원하는 상권정보시스템을 현대화하고, 지표 산출과 배치를 자동화하여 속도와 일관성을 높였습니다.
+												Led the modernization of a nationwide commercial-area information system for small enterprises, rebuilding core data flows and automating index computation to improve speed and consistency. Collaborated with a 30-person cross-functional team (frontend/backend, DBA) to plan and implement the platform end to end.
 											</p>
+
 											<p><br><strong>Objectives:</strong><br>
 												<ol style="padding-left:20px;">
-												<li>핵심 상권지수 5종(집객력·구매력·활성화·성장성·안정성) 재설계</li>
-												<li>월간 배치 실행 및 모니터링 자동화</li>
-												<li>DB 쿼리/테이블 최적화로 사용자 체감 속도 개선</li>
+												<li>Redesign five core commercial indices (Attraction, Purchasing Power, Activation, Growth, Stability) and standardize their update logic.</li>
+												<li>Automate monthly batch execution and monitoring for reliable, repeatable refreshes.</li>
+												<li>Optimize database structures/queries to improve perceived page response for end users.</li>
 												</ol>
 											</p>
+
 											<p><br><strong>Methodology:</strong><br>
 												<ol style="padding-left:20px;">
-												<li>ETL/지표 파이프라인 표준화(Python+SQL)</li>
-												<li>인덱싱·중간테이블 설계로 Full-scan 최소화</li>
-												<li>배치 스케줄링 및 장애 알림 구성</li>
+												<li>Standardized ETL and index pipelines in Python + SQL with intermediate tables to minimize full scans.</li>
+												<li>Table normalization and indexing, plus tuning/refactoring of bottleneck queries.</li>
+												<li>Scheduling and alerting via crontab and shell scripts; monthly data collection/aggregation automation.</li>
 												</ol>
 											</p>
+
 											<p><br><strong>Results:</strong><br>
 												<ol style="padding-left:20px;">
-												<li>플랫폼 전반 페이지 로딩 ≤ 0.8s</li>
-												<li>월간 지표 산출 완전 자동화로 운영 리스크 감소</li>
-												<li>정책/분석 사용자군의 활용성 개선</li>
+												<li>Reduced page load time to ≤ <strong>0.8s</strong> across the platform.</li>
+												<li>Fully automated monthly index updates, reducing operational risk and manual effort.</li>
+												<li>Delivered index-based dashboards that improved usability for policy and analysis users.</li>
 												</ol>
 											</p>
+
 											<p><br><strong>Conclusion:</strong><br>
-												레거시 환경에서도 구조적 최적화와 자동화를 통해 ‘빠르고 신뢰 가능한’ 상권 인텔리전스 기반을 구축했습니다.
+												Even within a legacy environment, structural optimization and robust automation established a fast, trustworthy commercial-intelligence foundation that non-experts can use for diagnosis and decision support.
 											</p>
 											</div>
+
 											<div class="detailbox">
 											<ul>
-												<li><span class="first">Tools/Libraries</span><span>Python, SQL, PostgreSQL/Oracle, Shell, cron</span></li>
-												<li><span class="first">Models</span><span>상권지수(5종) 산출 로직, 배치 모니터링</span></li>
+												<li><span class="first">Tools/Libraries</span><span>Python, SQL (RDBMS), Shell, crontab</span></li>
+												<li><span class="first">Models</span><span>Five commercial indices; batch monitoring & data quality</span></li>
 												<li><span class="first">Date</span><span>Jan 2024 – Jun 2024</span></li>
 											</ul>
 											</div>
 										</div>
+
 										<div class="additional_images"><ul></ul></div>
 										<div class="elisc_tm_button" data-position="center">
-											<a href="#">(정부 내부망 – 코드 보안유지서약)</a>
+											<a href="#">(Government intranet — NDA)</a>
 										</div>
 										</div>
 									</div>
+									<!-- /Modalbox Info End -->
 									</li>
+
 
 									<!-- Project: 2023년 상권정보시스템 기능개선(상권 재정의/기회 맵핑) -->
 									<li>
