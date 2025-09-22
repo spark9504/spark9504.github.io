@@ -595,6 +595,9 @@ body::-webkit-scrollbar-thumb{
 .elisc_tm_sidebar .copyright{
 	position: absolute;
 	bottom: 50px;
+	left: 0;
+	width: 100%;
+	text-align: center;
 }
 .elisc_tm_sidebar .social{
 	width: 100%;
@@ -603,10 +606,13 @@ body::-webkit-scrollbar-thumb{
 }
 .elisc_tm_sidebar .social ul{
 	margin: 0px;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
 }
 .elisc_tm_sidebar .social ul li{
-	margin: 0px 3px 0px 0px;
-	display: inline-block;
+	margin: 0;
+	display: inline-flex;
 }
 .elisc_tm_sidebar .social ul li:last-child{
 	margin-right: 0px;
