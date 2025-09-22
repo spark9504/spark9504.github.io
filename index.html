@@ -524,6 +524,90 @@
 										
 									<!-- </li> -->
 
+									<!-- Project: Apollo 기반 R&D 사업화 유망기술 탐색 서비스 개발 (KISTI) -->
+									<!-- Project: AI-Powered Tech Commercialization Scouting (KISTI) -->
+									<li>
+									<div class="list_inner">
+										<div class="image">
+										<img src="img/thumbs/31-36.jpg" alt="" />
+										<div class="main" data-img-url="img/portfolio/kisti_1.jpg"></div>
+										<a class="elisc_tm_full_link portfolio_popup" href="#"></a>
+										</div>
+										<div class="details">
+										<span class="category"><a href="#">LLM · RAG · Text-to-SQL</a></span>
+										<h3 class="title"><a class="line_effect portfolio_popup" href="#">KISTI Apollo – R&D Commercialization Tech Scouting</a></h3>
+										</div>
+									</div>
+
+									<!-- Modalbox Info Start -->
+									<div class="hidden_content_portfolio">
+										<div class="popup_details">
+										<div class="main_details">
+											<div class="textbox">
+											<p><strong>Introduction:</strong><br>
+												Designed and implemented an AI-assisted discovery service on <em>KISTI Apollo</em> to surface
+												promising R&amp;D technologies for commercialization. The system unifies heterogeneous
+												sources (papers, patents, projects, experts) and answers natural-language questions with
+												grounded citations via a production-grade Retrieval-Augmented Generation (RAG) pipeline.
+											</p>
+
+											<p><br><strong>Objectives:</strong><br>
+												<ol style="padding-left:20px;">
+												<li>Deliver reliable, citation-backed answers using a scalable RAG pipeline.</li>
+												<li>Enable non-technical users to query relational data via <strong>Text-to-SQL</strong>.</li>
+												<li>Build dense retrieval over unstructured corpora using Transformer embeddings.</li>
+												<li>Establish robust data/LLM guardrails (conf thresholding, source attributions, schema-aware parses).</li>
+												</ol>
+											</p>
+
+											<p><br><strong>Methodology:</strong><br>
+												<ol style="padding-left:20px;">
+												<li><strong>Data layer:</strong> Curated Apollo metadata &amp; documents; normalized entities in PostgreSQL (projects, organizations, tech domains, keywords).</li>
+												<li><strong>Vector search:</strong> Sentence-BERT embeddings indexed in <em>Milvus</em> for dense retrieval; hybrid BM25 + vector rerank for recall/precision balance.</li>
+												<li><strong>RAG orchestration:</strong> Query understanding → retrieval → chunk ranking → GPT-4 answer synthesis with inline citations and source snippets.</li>
+												<li><strong>Text-to-SQL:</strong> LangChain SQL chain with schema prompts, few-shot examples, and guarded execution (EXPLAIN/limit, safe whitelist).</li>
+												<li><strong>Service:</strong> FastAPI back end (tool routing, caching, QoS); output validation with Pydantic; Dockerized for dev/prod parity.</li>
+												</ol>
+											</p>
+
+											<p><br><strong>Results:</strong><br>
+												<ol style="padding-left:20px;">
+												<li>Unified search across papers/patents/projects with explainable, citation-rich answers.</li>
+												<li>Natural-language analytics on relational data via Text-to-SQL, lowering analyst ramp-up.</li>
+												<li>Established repeatable workflows for tech scouting briefs and partner shortlists.</li>
+												</ol>
+											</p>
+
+											<p><br><strong>Conclusion:</strong><br>
+												The Apollo prototype operationalizes knowledge discovery for commercialization: trustworthy
+												retrieval, rigorous source grounding, and SQL-grade analytics—wrapped in a user-friendly
+												interface suitable for researchers, BD, and policy stakeholders.
+											</p>
+											</div>
+
+											<div class="detailbox">
+											<ul>
+												<li><span class="first">Tools/Libraries</span>
+													<span>Python, FastAPI, LangChain, PostgreSQL, Milvus (pymilvus), Sentence-BERT, OpenAI GPT-4, Docker</span>
+												</li>
+												<li><span class="first">Models</span>
+													<span>RAG (Retrieval-Augmented Generation), Text-to-SQL, Dense Retrieval (Transformer embeddings)</span>
+												</li>
+												<li><span class="first">Date</span><span>Feb 2025 – Present</span></li>
+											</ul>
+											</div>
+										</div>
+
+										<div class="additional_images"><ul></ul></div>
+										<div class="elisc_tm_button" data-position="center">
+											<a href="#">(Internal pilot — link not public)</a>
+										</div>
+										</div>
+									</div>
+									<!-- /Modalbox Info End -->
+									</li>
+
+
 									<!-- Project: 공간가치 데이터 마트 구축 (롯데멤버스) -->
 									<!-- Project: Retail Location Intelligence (Lotte Members) -->
 									<li>
